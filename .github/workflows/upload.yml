@@ -1,0 +1,52 @@
+name: Auto Upload Pet Short
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: "0 16 * * *"
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ImageMagick (needed for text captions)
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+      - name: Fix ImageMagick security policy (allows text/caption rendering)
+        run: |
+          sudo sed -i 's/rights="none" pattern="@\*"/rights="read|write" pattern="@*"/' /etc/ImageMagick-6/policy.xml || true
+          sudo sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml || true
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore YouTube credentials
+        run: |
+          echo "${{ secrets.YT_CREDENTIALS_JSON }}" | base64 -d > credentials.json
+          echo "${{ secrets.YT_TOKEN_JSON }}" | base64 -d > token.json
+
+      - name: Run automation script
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python main.py
+
+      - name: Commit updated facts database and used clips tracking
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add facts_database.json used_clips.json
+          git commit -m "Update tracking [skip ci]" || echo "Nothing to commit"
+          git pull --rebase origin main
+          git push
