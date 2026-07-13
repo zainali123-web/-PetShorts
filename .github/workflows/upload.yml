@@ -48,5 +48,6 @@ jobs:
           git config user.email "actions@github.com"
           git add facts_database.json used_clips.json
           git commit -m "Update tracking [skip ci]" || echo "Nothing to commit"
+          git checkout -- credentials.json token.json || true
           git pull --rebase origin main
           git push
