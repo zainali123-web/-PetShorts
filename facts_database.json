@@ -1,19 +1,94 @@
 {
   "facts": [
-    {"id": 1, "text": "Your cat's purr might actually be healing you. It vibrates between 25 and 150 hertz, a frequency studies suggest can help heal bones and reduce pain.", "search_keyword": "cat purring closeup", "used": false},
-    {"id": 2, "text": "Your dog's nose is basically a superpower. They can smell up to one hundred thousand times better than you, thanks to 300 million scent receptors.", "search_keyword": "dog sniffing nose closeup", "used": false},
-    {"id": 3, "text": "Kittens from the same litter can have completely different fathers. It's called superfecundation, and it happens way more often than people realize.", "search_keyword": "kittens playing together", "used": false},
-    {"id": 4, "text": "Ever wonder why dogs curl into a tight ball to sleep? It's an ancient instinct to conserve body heat and protect vital organs from predators.", "search_keyword": "dog sleeping curled up", "used": false},
-    {"id": 5, "text": "Cats spend nearly a third of their waking life grooming themselves. It's not vanity, it regulates temperature and hides their scent from predators.", "search_keyword": "cat grooming licking fur", "used": false},
-    {"id": 6, "text": "Your dog has a nose print as unique as your fingerprint. No two dogs on Earth share the exact same pattern of ridges and creases.", "search_keyword": "dog nose closeup detail", "used": false},
-    {"id": 7, "text": "Cats can rotate their ears 180 degrees using 32 different muscles, letting them pinpoint the exact direction of a sound instantly.", "search_keyword": "cat ears alert listening", "used": false},
-    {"id": 8, "text": "Newborn puppies are born completely deaf and blind. For their first couple weeks, they survive purely on smell and touch alone.", "search_keyword": "newborn puppies sleeping", "used": false},
-    {"id": 9, "text": "A cat's whiskers are almost exactly as wide as its body. That's how it instantly knows whether it can fit through a tight gap.", "search_keyword": "cat whiskers closeup", "used": false},
-    {"id": 10, "text": "Just making eye contact with your dog releases oxytocin, the same bonding hormone shared between mothers and their babies.", "search_keyword": "dog owner eye contact love", "used": false},
-    {"id": 11, "text": "Ever wonder why your cat's eyes glow in the dark? A special reflective layer called the tapetum lucidum sits right behind their retina.", "search_keyword": "cat eyes glowing dark", "used": false},
-    {"id": 12, "text": "Your dog might actually know how long you've been gone. Their sense of time seems to be based on how much your scent has faded.", "search_keyword": "dog waiting by door", "used": false},
-    {"id": 13, "text": "Kittens start purring within just days of being born, often while nursing, as an early way to signal contentment to their mother.", "search_keyword": "kitten nursing mother cat", "used": false},
-    {"id": 14, "text": "Some dogs can detect a seizure or blood sugar crash minutes before it happens, purely through subtle shifts in human scent.", "search_keyword": "service dog helping owner", "used": false},
-    {"id": 15, "text": "Your cat's rough tongue is covered in tiny backward hooks called papillae, working like a built-in hairbrush that scrapes meat clean off bone.", "search_keyword": "cat tongue closeup licking", "used": false}
+    {
+      "id": 1,
+      "text": "Your cat's purr might actually be healing you. It vibrates between 25 and 150 hertz, a frequency studies suggest can help heal bones and reduce pain.",
+      "search_keyword": "cat purring closeup",
+      "used": false
+    },
+    {
+      "id": 2,
+      "text": "Your dog's nose is basically a superpower. They can smell up to one hundred thousand times better than you, thanks to 300 million scent receptors.",
+      "search_keyword": "dog sniffing nose closeup",
+      "used": true
+    },
+    {
+      "id": 3,
+      "text": "Kittens from the same litter can have completely different fathers. It's called superfecundation, and it happens way more often than people realize.",
+      "search_keyword": "kittens playing together",
+      "used": false
+    },
+    {
+      "id": 4,
+      "text": "Ever wonder why dogs curl into a tight ball to sleep? It's an ancient instinct to conserve body heat and protect vital organs from predators.",
+      "search_keyword": "dog sleeping curled up",
+      "used": false
+    },
+    {
+      "id": 5,
+      "text": "Cats spend nearly a third of their waking life grooming themselves. It's not vanity, it regulates temperature and hides their scent from predators.",
+      "search_keyword": "cat grooming licking fur",
+      "used": false
+    },
+    {
+      "id": 6,
+      "text": "Your dog has a nose print as unique as your fingerprint. No two dogs on Earth share the exact same pattern of ridges and creases.",
+      "search_keyword": "dog nose closeup detail",
+      "used": false
+    },
+    {
+      "id": 7,
+      "text": "Cats can rotate their ears 180 degrees using 32 different muscles, letting them pinpoint the exact direction of a sound instantly.",
+      "search_keyword": "cat ears alert listening",
+      "used": false
+    },
+    {
+      "id": 8,
+      "text": "Newborn puppies are born completely deaf and blind. For their first couple weeks, they survive purely on smell and touch alone.",
+      "search_keyword": "newborn puppies sleeping",
+      "used": false
+    },
+    {
+      "id": 9,
+      "text": "A cat's whiskers are almost exactly as wide as its body. That's how it instantly knows whether it can fit through a tight gap.",
+      "search_keyword": "cat whiskers closeup",
+      "used": false
+    },
+    {
+      "id": 10,
+      "text": "Just making eye contact with your dog releases oxytocin, the same bonding hormone shared between mothers and their babies.",
+      "search_keyword": "dog owner eye contact love",
+      "used": false
+    },
+    {
+      "id": 11,
+      "text": "Ever wonder why your cat's eyes glow in the dark? A special reflective layer called the tapetum lucidum sits right behind their retina.",
+      "search_keyword": "cat eyes glowing dark",
+      "used": false
+    },
+    {
+      "id": 12,
+      "text": "Your dog might actually know how long you've been gone. Their sense of time seems to be based on how much your scent has faded.",
+      "search_keyword": "dog waiting by door",
+      "used": false
+    },
+    {
+      "id": 13,
+      "text": "Kittens start purring within just days of being born, often while nursing, as an early way to signal contentment to their mother.",
+      "search_keyword": "kitten nursing mother cat",
+      "used": false
+    },
+    {
+      "id": 14,
+      "text": "Some dogs can detect a seizure or blood sugar crash minutes before it happens, purely through subtle shifts in human scent.",
+      "search_keyword": "service dog helping owner",
+      "used": false
+    },
+    {
+      "id": 15,
+      "text": "Your cat's rough tongue is covered in tiny backward hooks called papillae, working like a built-in hairbrush that scrapes meat clean off bone.",
+      "search_keyword": "cat tongue closeup licking",
+      "used": false
+    }
   ]
 }
