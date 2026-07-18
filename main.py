@@ -217,9 +217,9 @@ def upload_short(youtube, video_path, title, description):
             "title": title,
             "description": description,
             "tags": [
-                "cats", "dogs", "pets", "animalfacts", "shorts",
-                "funnyanimals", "funnypets", "catsoftheday", "dogsoftheday",
-                "petfacts", "cutepets", "animalvideos"
+                "catfacts", "dogfacts", "animalbehavior", "petpsychology",
+                "catbehavior", "dogbehavior", "animalscience", "didyouknow",
+                "petsofyoutube", "shorts"
             ],
             "categoryId": "15",  # Pets & Animals
         },
@@ -240,7 +240,7 @@ def main():
 
     # Spoken + captioned CTA at the end - built into the same narration text
     # so it's automatically in sync in both the voice and the captions
-    cta = " If you love animals, follow for more cat and dog facts like this."
+    cta = " If you love animals, hit subscribe for a new cat or dog fact every day."
     narration_text = fact["text"] + cta
 
     print("Generating voiceover...")
@@ -254,11 +254,11 @@ def main():
 
     print("Uploading to YouTube...")
     youtube = get_youtube_service()
-    title = "🐾 " + fact["text"][:55] + "... #shorts #cats #dogs"
+    title = "🐾 " + fact["text"][:55] + "... #shorts #catfacts #dogfacts"
     description = (
         f"{fact['text']} 😂🐶🐱\n\n"
-        "#cats #dogs #pets #animalfacts #shorts #funnyanimals #funnypets "
-        "#catsoftheday #dogsoftheday #petfacts #cutepets #animalvideos"
+        "#shorts #catfacts #dogfacts #animalbehavior #petpsychology "
+        "#catbehavior #dogbehavior #animalscience #didyouknow #petsofyoutube"
     )
     upload_short(youtube, OUTPUT_VIDEO, title, description)
 
